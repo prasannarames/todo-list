@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo-list</title>
-    <link rel="stylesheet" href="style.css".css">
+    <script src="https://kit.fontawesome.com/6f510a5673.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" .css">
     <script src="app.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="container">
+
+        <header class="text-center text-dark my-4">
+            <h1 class="mb-4">Todo List</h1>
+            <form class="search">
+                <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+            </form>
+        </header>
+
+
+        <ul class="list-group todos mx-auto text-light">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>go to gym</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>play football</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>eat healthy food</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+        </ul>
+
+        <form class="add text-center my-4">
+            <label class="text-dark">Add a new todo...</label>
+            <input class="form-control m-auto" type="text" name="add" />
+        </form>
+
+
+    </div>
+
 </body>
+
 </html>

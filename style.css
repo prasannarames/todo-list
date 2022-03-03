@@ -1,0 +1,26 @@
+body{
+    background:#ea580c ;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+  }
+  .container{
+    max-width: 400px;
+  }
+  input[type=text],
+  input[type=text]:focus{
+    color: #fff;
+    border: none;
+    background: rgba(0,0,0,0.2);
+    max-width: 400px;
+  }
+  .todos li{
+    background: #fdba74;
+  }
+  .delete{
+    cursor: pointer;
+  }
+
+  header{
+      font-weight: bold;
+  }
