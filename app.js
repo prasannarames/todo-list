@@ -20,6 +20,15 @@ addTodo.addEventListener('submit', e => {
     if(todo.length){ // if there is no letters in addTodo in wont add
         todoTemplate(todo);
         addTodo.reset();
-    };
+    }
 
+});
+
+
+// delete todos
+
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
 });
