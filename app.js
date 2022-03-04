@@ -14,10 +14,10 @@ todoTemplate = (todo => {
 });
 
 addTodo.addEventListener('submit', e => {
-    e.preventDefault(); // preventing from refresh of the page
+    e.preventDefault(); // prevents from refreshing of the page
     const todo = addTodo.add.value.trim(); // trim used to cut whitespaces or blankspaces 
 
-    if(todo.length){ // if there is no letters in addTodo in wont add
+    if(todo.length){ // if there is no letters in addTodo it wont add
         todoTemplate(todo);
         addTodo.reset();
     }
