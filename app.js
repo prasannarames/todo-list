@@ -1,9 +1,12 @@
 //add a new todo-list item
+
 const addTodo = document.querySelector('.add');
 
 const list = document.querySelector('.todos');
 
-todoTemplate = (todo => {
+const search = document.querySelector('.search input');
+
+todoTemplate = (todo) => {
     const html = `
     <li class="list-group-item d-flex justify-content-between align-items-center">
     <span>${todo}</span>
@@ -11,7 +14,7 @@ todoTemplate = (todo => {
     `
     list.innerHTML += html;
 
-});
+};
 
 addTodo.addEventListener('submit', e => {
     e.preventDefault(); // prevents from refreshing of the page
@@ -32,3 +35,24 @@ list.addEventListener('click', e => {
         e.target.parentElement.remove();
     }
 });
+
+
+// search todos using keyup event and some array methods
+
+const filterTodo = (sTerm) =>{
+    Array.from(list.children)
+     .filter((todo)=>!todo.textContent.toLowerCase().includes(sTerm))
+     .forEach((todo)=>todo.classList.add('filtered'));
+
+    Array.from(list.children)
+     .filter((todo)=>todo.textContent.toLowerCase().includes(sTerm))
+     .forEach((todo)=>todo.classList.remove('filtered'));
+
+};
+
+search.addEventListener('keyup', () => {
+    const sTerm = search.value.trim().toLowerCase();
+    filterTodo(sTerm);
+
+});
+

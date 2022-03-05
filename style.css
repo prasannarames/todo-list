@@ -24,3 +24,7 @@ body{
   header{
       font-weight: bold;
   }
+
+  .filtered {
+    display: none !important;
+  }
